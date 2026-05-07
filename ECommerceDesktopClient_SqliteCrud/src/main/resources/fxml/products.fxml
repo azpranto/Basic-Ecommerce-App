@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.ecommerce.controllers.ProductsController"
+      spacing="14" styleClass="page">
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <children>
+            <Label text="🛍 Products" styleClass="page-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="searchField" promptText="Search products..." prefWidth="280"/>
+            <Button text="Export CSV" onAction="#onExportCsv" styleClass="btn-secondary"/>
+        </children>
+    </HBox>
+
+    <TableView fx:id="table" VBox.vgrow="ALWAYS" styleClass="table">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="70"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="200"/>
+            <TableColumn fx:id="colCategory" text="Category" prefWidth="160"/>
+            <TableColumn fx:id="colPrice" text="Price" prefWidth="120"/>
+            <TableColumn fx:id="colStock" text="Stock" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <children>
+            <Button fx:id="addToCartBtn" text="Add to Cart" onAction="#onAddToCart" styleClass="btn-secondary"/>
+            <Button fx:id="detailsBtn" text="Details / Rate" onAction="#onShowDetails" styleClass="btn-secondary"/>
+            <Region HBox.hgrow="ALWAYS"/>
+        </children>
+    </HBox>
+
+    <VBox styleClass="card" spacing="10">
+        <children>
+            <Label text="Add / Update" styleClass="card-title"/>
+            <HBox spacing="10">
+                <children>
+                    <VBox spacing="6" HBox.hgrow="ALWAYS">
+                        <children>
+                            <Label text="Name" styleClass="field-label"/>
+                            <TextField fx:id="nameField" promptText="Product name"/>
+                        </children>
+                    </VBox>
+                    <VBox spacing="6" HBox.hgrow="ALWAYS">
+                        <children>
+                            <Label text="Category" styleClass="field-label"/>
+                            <TextField fx:id="categoryField" promptText="Category"/>
+                        </children>
+                    </VBox>
+                    <VBox spacing="6">
+                        <children>
+                            <Label text="Price" styleClass="field-label"/>
+                            <Spinner fx:id="priceSpinner" prefWidth="140"/>
+                        </children>
+                    </VBox>
+                    <VBox spacing="6">
+                        <children>
+                            <Label text="Stock" styleClass="field-label"/>
+                            <Spinner fx:id="stockSpinner" prefWidth="140"/>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+
+            <VBox spacing="6">
+                <children>
+                    <Label text="Description" styleClass="field-label"/>
+                    <TextField fx:id="descriptionField" promptText="Short description"/>
+                </children>
+            </VBox>
+
+            <HBox spacing="10">
+                <children>
+                    <Button fx:id="saveBtn" text="Add" onAction="#onSave" styleClass="btn-primary"/>
+                    <Button fx:id="deleteBtn" text="Delete" onAction="#onDelete" styleClass="btn-danger"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button text="Clear" onAction="#onClear" styleClass="btn-secondary"/>
+                </children>
+            </HBox>
+        </children>
+        <HBox.margin>
+            <Insets top="2" right="0" bottom="0" left="0"/>
+        </HBox.margin>
+    </VBox>
+</VBox>
+

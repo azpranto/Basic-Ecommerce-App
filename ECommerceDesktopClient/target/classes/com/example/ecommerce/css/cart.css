@@ -1,0 +1,282 @@
+
+
+
+#lMainPane {
+    -fx-background-color: #A9C5A0;
+    -fx-padding: 10px;
+}
+
+#title {
+    -fx-wrap-text: true;            /* Allows text to go to next line */
+    -fx-max-width: infinity;        /* Lets label fill the sidebar width */
+
+    /* REMOVE fixed height constraints */
+    -fx-pref-height: -1;            /* -1 means 'calculate automatically' */
+    -fx-min-height: -1;
+
+    /* Optional: Padding makes wrapped text look much better */
+    -fx-padding: 15;
+    -fx-text-alignment: LEFT;       /* Keeps text aligned to the left */
+
+    -fx-text-fill: #000000;
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 15px;
+}
+
+#LBox {
+    -fx-spacing: 10px;
+}
+
+#LDashboard, #LProducts, #LCart, #LOrders, #LCustomers {
+
+    -fx-padding: 15px;
+    -fx-text-fill: #000000;
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 15px;
+    -fx-background-radius: 10px;
+    -fx-pref-width: 263px;
+    -fx-pref-height: 73px;
+    -fx-max-width: 263px;
+    -fx-max-height: 55px;
+}
+
+#LDashboard:hover, #LCustomers:hover, #LProducts:hover, #LOrders:hover {
+    -fx-background-color: #C6DEC6;
+}
+
+#LCart{
+    -fx-background-color: #B8D2B3;
+}
+
+/* Ensure the sidebar stays the same width no matter what */
+.sidebar {
+    -fx-background-color: #2c3e50;
+    -fx-min-width: 251px;
+    -fx-pref-width: 251px;
+    -fx-max-width: 251px;
+    /* This ensures it stretches top to bottom */
+    -fx-max-height: infinity;
+}
+
+
+
+
+/*righ side*/
+
+#titlePane {
+    -fx-alignment: CENTER_LEFT; /* Vertical center, Horizontal left */
+    -fx-padding: 0 20 0 20;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+#rTitle {
+    -fx-max-width: infinity;
+    /* This makes this label take up all space not used by 'date' */
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 15px;
+    -fx-text-fill: #000000;
+}
+
+#date {
+    -fx-alignment: CENTER_RIGHT;
+    -fx-text-alignment: RIGHT;
+    -fx-min-width: USE_PREF_SIZE; /* Prevents the date from being crushed */
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 12px;
+    -fx-text-fill: #656565;
+}
+
+#rMainPane {
+    -fx-background-color: #e6e5e5;
+
+}
+
+#bottomBox {
+    -fx-padding: 20px;
+}
+
+.main-content {
+    -fx-background-color: #f4f4f4;
+    -fx-max-width: infinity;
+    -fx-max-height: infinity;
+}
+
+/* Shadow for the title pane (bottom shadow) */
+#titlePane {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-padding: 0 20 0 20;
+}
+
+#detailBox {
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-max-width: infinity;
+}
+
+#rProducts{
+    -fx-max-width: infinity;
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 15px;
+    -fx-padding: 30 0 30 0;
+}
+
+#rPara {
+    -fx-max-width: infinity;
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 12px;
+    -fx-text-fill: #606060;
+    -fx-line-spacing: 5px;
+    -fx-wrap-text: true;
+}
+
+#bottomBox {
+    -fx-spacing: 15px;
+}
+
+
+#searchbox {
+    -fx-spacing: 10px;
+    -fx-max-width: infinity;
+}
+
+#searchpanel {
+    -fx-max-width: -1;
+    -fx-font-family: "SansSerif";
+    -fx-text-fill: #656565;
+}
+
+#expBtn {
+    -fx-background-color: #3C433B; /* A nice emerald green */
+    -fx-text-fill: white;          /* White text */
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;      /* Rounded corners */
+    -fx-cursor: hand;
+}
+
+#expBtn:hover {
+    -fx-background-color: #5f6a5d; /* Slightly darker green on hover */
+}
+
+#itemsWrapper {
+    -fx-max-width: infinity;
+    -fx-background-color: #ffffff; /* Or your preferred color */
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1;
+}
+
+#titleGrid {
+    -fx-background-color: #A9C5A0;
+    -fx-background-radius: 15 15 0 0;
+    -fx-border-radius: 15 15 0 0;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1 1 0 1;
+}
+
+#itemGrid {
+    -fx-padding: 0 10 0 10;
+}
+
+
+#item0,#item1, #item2, #item3, #item4, #item5 {
+    -fx-padding: 10px;
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 12px;
+    -fx-text-fill: #000000;
+}
+
+#inputBox {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+#inputTitle {
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 15px;
+    -fx-text-fill: #3C433B;
+}
+
+#btnbox {
+    -fx-spacing: 10px;
+    -fx-max-width: infinity;
+}
+
+#savebtn, #clrbtn {
+    -fx-background-color: #C5EFCB;
+    -fx-background-radius: 10px;
+    -fx-padding: 7 20 7 20;
+    -fx-text-fill: #000000;
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 12px;
+}
+
+#savebtn:hover, #clrbtn:hover {
+    -fx-background-color: #A9C5A0;
+}
+
+#textField1, #spinner1, #spinner2 {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 10;
+    -fx-max-width: infinity;
+    -fx-max-height: 30px;
+    -fx-font-family: "SansSerif";
+    -fx-font-weight: 800;
+    -fx-font-size: 12px;
+    -fx-text-fill: #7a7a7a;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6 {
+    -fx-max-width: infinity;
+    -fx-max-height: 30px;
+    -fx-spacing: 2px;
+}
+
+/* 1. Target the actual inner label and remove its default button background */
+.split-menu-button > .label {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 5 12 5 12; /* This gives it the height/width breathing room */
+    -fx-text-fill: #111827;
+}
+
+/* 2. Target the arrow-button container and remove its background */
+.split-menu-button > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/* 3. Make sure the main container has the white background and border */
+.split-menu-button {
+    -fx-background-color: white;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-width: 1;
+    -fx-background-insets: 0;
+}
+
+/* 4. Fix the arrow color so it's not hidden */
+.split-menu-button > .arrow-button > .arrow {
+    -fx-background-color: #374151;
+}
+
+#inputBoxes {
+    -fx-spacing: 10px;
+    -fx-max-width: infinity;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ecommerce.controllers.MainController">
+    <left>
+        <VBox styleClass="sidebar" prefWidth="260.0">
+            <children>
+                <Label text="E-Commerce Desktop Client" styleClass="brand" wrapText="true"/>
+                <VBox styleClass="nav">
+                    <children>
+                        <Label fx:id="navDashboard" text="📊 Dashboard" onMouseClicked="#showDashboard"/>
+                        <Label fx:id="navProducts" text="🛍 Products" onMouseClicked="#showProducts"/>
+                        <Label fx:id="navCustomers" text="👤 Customers" onMouseClicked="#showCustomers"/>
+                        <Label fx:id="navCart" text="🛒 Cart" onMouseClicked="#showCart"/>
+                        <Label fx:id="navOrders" text="📦 Orders" onMouseClicked="#showOrders"/>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox styleClass="main">
+            <children>
+                <HBox styleClass="topbar">
+                    <children>
+                        <Label text="E-Commerce Desktop Client" styleClass="topbar-title"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label fx:id="clockLabel" text="" styleClass="chip"/>
+                    </children>
+                </HBox>
+
+                <StackPane fx:id="contentPane" styleClass="content"/>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
+

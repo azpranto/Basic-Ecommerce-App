@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.ecommerce.controllers.DashboardController"
+      spacing="16.0" styleClass="page">
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+
+    <Label text="📊 Dashboard" styleClass="page-title"/>
+    <Label text="Quick snapshot from your SQLite data." styleClass="muted"/>
+
+    <HBox spacing="14">
+        <children>
+            <VBox styleClass="stat-card" spacing="6" prefWidth="220">
+                <children>
+                    <Label text="Products" styleClass="stat-label"/>
+                    <Label fx:id="productsCount" text="0" styleClass="stat-value"/>
+                </children>
+            </VBox>
+            <VBox styleClass="stat-card" spacing="6" prefWidth="220">
+                <children>
+                    <Label text="Customers" styleClass="stat-label"/>
+                    <Label fx:id="customersCount" text="0" styleClass="stat-value"/>
+                </children>
+            </VBox>
+            <VBox styleClass="stat-card" spacing="6" prefWidth="220">
+                <children>
+                    <Label text="Pending Orders" styleClass="stat-label"/>
+                    <Label fx:id="pendingOrdersCount" text="0" styleClass="stat-value"/>
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+</VBox>
+
