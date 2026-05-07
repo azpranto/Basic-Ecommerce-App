@@ -38,7 +38,7 @@ A modern, elegant, and interactive desktop application for managing e-commerce o
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Ecommerce/ECommerceDesktopClient_SqliteCrud
+   cd ECommerceDesktopClient_SqliteCrud
    ```
 3. Run the application:
    ```bash
